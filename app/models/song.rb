@@ -19,8 +19,9 @@ class Song < ActiveRecord::Base
       drake = Artist.create(name: "Drake")
        self.artist = drake
      else
-       self.artist = Artist.where(name: "Drake") 
-      
+       array = Artist.where(name: "Drake") 
+      binding.pry
+      self.artist 
      end 
       end
 
