@@ -13,13 +13,13 @@ class Song < ActiveRecord::Base
  
     #
     
-    Artist.where(name: "Drake")
+    
     
     if !Artist.exists?(:name => "Drake")
       drake = Artist.create(name: "Drake")
        self.artist = drake
      else
-       self.artist = drake 
+       self.artist = Artist.where(name: "Drake") 
       
      end 
       end
