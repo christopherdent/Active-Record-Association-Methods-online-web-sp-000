@@ -13,7 +13,7 @@ class Song < ActiveRecord::Base
  
     #
     binding.pry 
-    Artist.find_or_create_by('Drake')
+    Artist.find_or_create_by(name: 'Drake')
     
     self.artist = Artist.where(name: "Drake") 
 =begin    
