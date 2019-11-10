@@ -16,7 +16,7 @@ class Song < ActiveRecord::Base
     
     
     if !Artist.exists?(:name => "Drake")
-      drake = Artist.create(name: "Drake")
+      drake = Artist.new(name: "Drake")
        self.artist = drake
      else
        array = Artist.where(name: "Drake") 
