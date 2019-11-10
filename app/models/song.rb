@@ -15,7 +15,7 @@ class Song < ActiveRecord::Base
     #
     drake = Artist.find_or_create_by(name: 'Drake')
     binding.pry 
-    self.artist = Artist.where(name: "Drake") 
+    self.artist = drake
 =begin    
     if !Artist.exists?(:name => "Drake")
       drake = Artist.new(name: "Drake")
