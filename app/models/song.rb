@@ -14,7 +14,9 @@ class Song < ActiveRecord::Base
     #create_artist(name: "Drake")
     
     #self.artist = drake
-
+    if !Artist.exists?(:name => "Drake")
+      
+      
       Artist.find_or_create_by!(name: "Drake") do |a|
         self.artist = a 
         #  binding.pry 
