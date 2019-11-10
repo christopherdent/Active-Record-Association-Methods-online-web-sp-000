@@ -11,15 +11,13 @@ class Song < ActiveRecord::Base
     # Drake doesn't exist in the database as an artist yet, so you'll have to create a record
     # Hint: you won't want to create an artist record every time this method is called, only if an Drake is *not found*
  
-    #create_artist(name: "Drake")
+    #
     
-    #self.artist = drake
+    
     if !Artist.exists?(:name => "Drake")
+      drake = create_artist(name: "Drake")
+       self.artist = drake  
       
-      
-      Artist.find_or_create_by!(name: "Drake") do |a|
-        self.artist = a 
-        #  binding.pry 
       end 
       end
 
