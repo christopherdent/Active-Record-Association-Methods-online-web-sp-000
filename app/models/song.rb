@@ -18,6 +18,7 @@ class Song < ActiveRecord::Base
     if !Artist.exists?(:name => "Drake")
       drake = Artist.new(name: "Drake")
        self.artist = drake
+       binding.pry
      else
       self.artist = Artist.where(name: "Drake") 
      end 
