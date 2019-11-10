@@ -24,4 +24,4 @@ class Song < ActiveRecord::Base
      end 
     end
   end
- 
+ find_by
