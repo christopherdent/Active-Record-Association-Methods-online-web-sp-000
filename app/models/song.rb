@@ -13,7 +13,7 @@ class Song < ActiveRecord::Base
  
     #
     
-    find_or_create_by
+    User.find_or_create_by(name: 'Drake')
     
     if !Artist.exists?(:name => "Drake")
       drake = Artist.new(name: "Drake")
