@@ -14,7 +14,7 @@ class Song < ActiveRecord::Base
     #
     
     User.find_or_create_by(name: 'Drake')
-    
+=begin    
     if !Artist.exists?(:name => "Drake")
       drake = Artist.new(name: "Drake")
        self.artist = drake
@@ -23,5 +23,6 @@ class Song < ActiveRecord::Base
       self.artist = Artist.where(name: "Drake") 
      end 
     end
+=end 
   end
- find_by
+ 
